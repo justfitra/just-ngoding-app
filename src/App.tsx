@@ -1,11 +1,7 @@
-import "./App.css";
-import Navbar from "./components/Navbar/App";
-
 const App = () => {
   return (
     <>
-      <Navbar />
-      <div className="bg-lime-100">
+      <div className="bg-lime-100 w-full min-h-screen">
         <h1>Hello World</h1>
       </div>
     </>
