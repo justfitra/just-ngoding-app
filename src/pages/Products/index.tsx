@@ -1,8 +1,12 @@
+import Container from "../../components/Contaniner";
+
 const Products = () => {
   return (
-    <div className="bg-[#FFFCFB] w-full min-h-screen">
-      <h1 className="font-bold">Products Page</h1>
-    </div>
+    <Container>
+      <div className="bg-[#FFFCFB] pt-40 w-full min-h-screen">
+        <h1 className="font-medium">Products Page</h1>
+      </div>
+    </Container>
   );
 };
 
