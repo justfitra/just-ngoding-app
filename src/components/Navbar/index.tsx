@@ -1,12 +1,16 @@
+import { LuCodeXml } from "react-icons/lu";
 import { NavLink } from "react-router";
 
 const Navbar = () => {
   return (
     <>
-      <nav className="px-20 py-5 fixed top-0 left-0 w-full bg-white shadow-md">
-        <div className="flex items-center justify-between">
+      <nav className="px-20 py-5 fixed flex items-center justify-center top-0 left-0 w-full bg-white shadow-md">
+        <div className="flex items-center justify-between w-full max-w-7xl mx-autot">
           <div>
-            <h1 className="text-4xl font-bold">JustNgoding</h1>
+            <h1 className=" flex items-center justify-center gap-2 text-4xl font-bold">
+              <LuCodeXml />
+              JustNgoding
+            </h1>
             <span>Solusi website anda</span>
           </div>
           <div>
