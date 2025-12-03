@@ -5,6 +5,8 @@ interface ButtonProps {
   color?: "dark" | "light";
   type?: "button" | "submit" | "reset";
   href?: string;
+  className?: string;
+  onClick?: () => void;
 }
 
 const Button = ({
@@ -12,13 +14,14 @@ const Button = ({
   color = "dark",
   type = "button",
   href = "",
+  className = "",
+  onClick,
 }: ButtonProps) => {
   const darkColor =
     "bg-gray-800 text-white hover:bg-gray-900 transition-all ease-in-out duration-200";
   const lightColor =
     "bg-gray-200 text-gray-800 hover:bg-gray-300 transition-all ease-in-out duration-200";
-  const defaultStyle =
-    "font-semibold px-6 py-3 cursor-pointer text-lg rounded-lg";
+  const defaultStyle = "font-semibold cursor-pointer text-lg rounded-lg";
 
   if (href) {
     return (
@@ -26,7 +29,7 @@ const Button = ({
         to={href}
         className={`${defaultStyle} ${
           color === "dark" ? darkColor : lightColor
-        } `}
+        } ${className}`}
       >
         {title}
       </NavLink>
@@ -36,9 +39,10 @@ const Button = ({
   return (
     <button
       type={type}
+      onClick={onClick}
       className={`${defaultStyle} ${
         color === "dark" ? darkColor : lightColor
-      } `}
+      } ${className}`}
     >
       {title}
     </button>
